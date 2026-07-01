@@ -60,6 +60,23 @@ SetTitleMatchMode(2)     ; Regex
 
 ; ----------------------------------------------------------------------------------------------
 
+^!Space::                                   ; emoji keyboard
+{
+    ; Check if Right Alt (RAlt) is physically pressed
+    if GetKeyState("RAlt", "P")
+    {
+        Send "{Space}"
+    }
+    else
+    {
+        Send "{LWin Down}.{LWin Up}"
+    }
+}
+
+
+
+; ----------------------------------------------------------------------------------------------
+
 #HotIf WinActive("FastStone")
     SC00C::                                   ; ü
     {
