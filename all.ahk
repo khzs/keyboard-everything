@@ -15,6 +15,16 @@ SetTitleMatchMode(2)     ; Regex
 
 ; ----------------------------------------------------------------------------------------------
 
+!Q::Send "!{F4}"                            ; cmd q             -> alt f4
+
+!Space::Send "^{Esc}"                       ; cmd space         -> open start menu
+
+!Backspace::Send "{Delete}"                 ; cmd backspace     -> delete
+
+
+
+; ----------------------------------------------------------------------------------------------
+
 #HotIf WinActive("FastStone")
     SC00C::                                   ; ü
     {
