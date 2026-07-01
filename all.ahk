@@ -25,6 +25,41 @@ SetTitleMatchMode(2)     ; Regex
 
 ; ----------------------------------------------------------------------------------------------
 
++!5::                                         ; snipping tool
+{
+    Send "{LWin Down}"
+    Sleep 800
+    Send "{LAlt Down}"
+    Send "b"
+    Send "{LAlt Up}"
+    Send "{LWin Up}"
+
+    Sleep 7000  ; ez azert kell, hogy eltunjon a kek HDR popup oldalrol
+
+    Send "{LWin Down}"
+    Sleep 800
+    Send "{LShift Down}"
+    Send "s"
+    Send "{LShift Up}"
+    Send "{LWin Up}"
+
+    Sleep 10000
+
+    Send "{LWin Down}"
+    Sleep 800
+    Send "{LAlt Down}"
+    Send "b"
+    Send "{LAlt Up}"
+    Send "{LWin Up}"
+}
+; 400 + 0       ; mar elsore is bebaszhat
+; 800 + 0       ; elso 3 ok
+; 800 + 200     ; fixen stabilan
+
+
+
+; ----------------------------------------------------------------------------------------------
+
 #HotIf WinActive("FastStone")
     SC00C::                                   ; ü
     {
